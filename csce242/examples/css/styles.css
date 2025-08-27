@@ -1,0 +1,41 @@
+/* Structure */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:url("images/safari-background.jpg");
+}
+
+#content {
+    background:#AFEEEE;
+    width:70%;
+    margin:auto;    /* center */
+    padding:1%;     /* spaces text away from edge */
+    border-radius:5px;  /* rounder corners */
+}
+
+/* Tables */
+table {
+    border-collapse: collapse; /* gets rid of double border */
+}
+
+td, th {
+    border:1px solid black;
+    padding:5px 10px;   /* Top and bottom 5px, left and right 10px */
+}
+
+th {
+    background:silver;
+}
+
+/* Images */
+#giraffe-pic {
+    box-shadow: 7px 7px skyblue;
+}
+
+/* Typography */
+h1 {
+    color:#227337;
+}
+
+h2 {
+    color:#227337;
+}
