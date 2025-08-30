@@ -12,6 +12,19 @@ body {
     border-radius:5px;
 }
 
+/* Main Nav */
+#main-nav ol {
+    padding-left:0;
+    list-style-type: none;
+}
+
+#main-nav a {
+    display:block;
+    background:white;
+    padding:10%; 
+    border-radius:8px;
+}
+
 /* Typography */
 h1 {
     text-align: center;
@@ -42,7 +55,7 @@ li {
     margin-bottom: 2%;
 }
 
-#assignmentList {
+#assignment-list {
     list-style-position: inside;
     padding-left: 0;
     text-align: center;
@@ -50,6 +63,69 @@ li {
     font-weight: 510;
 }
 
+#assignment-list a img {
+    display:block;
+    padding:5px;
+    margin: auto;
+}
+
+#assignment-list li {
+    width:400px;
+    height:300px;
+}
+
+#assignment-list li p {
+    font-size:13px;
+    text-align:center;
+}
+
 #headings {
     color:rgb(44, 44, 173);
+    text-shadow: 1px 1px 2px black;     /* may remove, not sure yet */
+}
+
+#name-heading {
+    text-align:center;
+    color:rgb(8, 9, 81);
+    margin:0;
+}
+
+/* Larger Devices Media Query */
+@media only screen and (min-width: 760px) {
+
+    #content {
+        width:70%;
+    }
+
+    /* Columns */
+    .columns {
+        display:flex;
+        justify-content: center;
+    }
+
+    .columns li h3 {
+        margin:0;
+    }
+
+    .columns li img {
+        margin-bottom:10px;
+        height:auto;
+    }
+
+    /* Main Nav */
+    #main-nav ol {
+        flex:1;
+        display:flex;
+        gap:20px;
+    }
+
+    #main-nav a {
+        text-align:center;
+        padding:5px;
+    }
+
+    #main-nav a:hover {
+        color:white;
+        background:rgb(19, 19, 66);
+    }
 }

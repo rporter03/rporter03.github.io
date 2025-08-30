@@ -6,18 +6,32 @@
     </head>
     <body>
         <div id="content">
-            <!-- Class Description / Name / Link to Repo -->
-            <h1 id="headings">CSCE 242: Website Design and Development</h1>
-            <h2 id="headings">Robert Porter</h2>
-            <p>This class is about the fundamentals of building a website which aims to familiarize students with essential tools such as HTML, CSS, and JavaScript.</p>
-            <h3><a id ="headings" href="https://github.com/rporter03/rporter03.github.io/tree/main/csce242">Visit Repository Here</a></h3>
-
-            <!-- Assignment List -->
-            <h2 id="headings">Assignments</h2>
-            <ol id="assignmentList">
-                <li><a href="assignments/01html/index.html">Basic HTML</a></li>
-                <li><a href="assignments/02css/index.html">Basic CSS</a></li>
-            </ol>
+            <header id="main-header">
+                <!-- Class Description / Name / Link to Repo -->
+                <h4 id="name-heading">Robert Porter</h4>
+                <h1 id="headings">CSCE 242: Website Design and Development</h1>
+                <p id="class-description">This class is about the fundamentals of building a website which aims to familiarize students with essential tools such as HTML, CSS, and JavaScript.</p>
+            </header>
+            <main id="main-content">
+                <nav id="main-nav">
+                    <!-- Assignment List -->
+                    <h2 id="headings">Assignments</h2>
+                    <ol id="assignment-list" class="columns">
+                        <li> 
+                            <h3><a href="assignments/01html/index.html">Assignment 1 - Basic HTML<img src="images/assign1.png" alt="Assignment 1"><p>This assignment's goal was to get familiarized with the basics of HTML</p></a></h3> 
+                        </li>
+                        <li> 
+                            <h3><a href="assignments/02css/index.html">Assignment 2 - Basic CSS<img src="images/assign2.png" alt="Assignment 2"><p>This assignment showcases basic styling using CSS</p></a></h3> 
+                        </li>
+                        <li> 
+                            <h3><a href="#">Assignment 3 - Page Layout<img src="images/placeholder.png" alt="Placeholder for Assignment 3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a></h3> 
+                        </li>
+                    </ol>
+                </nav>
+            </main>
+            <footer id="main-footer">
+                <h3><a id ="headings" href="https://github.com/rporter03/rporter03.github.io/tree/main/csce242">Visit Repository Here</a></h3>
+            </footer>
         </div>
     </body>
 </html>
