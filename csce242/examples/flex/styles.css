@@ -1,0 +1,90 @@
+/* Structure */
+body {
+    background:#558C03;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width:95%;
+    margin:auto;
+    background:rgba(255, 255, 255, 0.7); /* rgba - red green blue transparency 0-1 */
+    border-radius:10px;
+    padding:5px;
+}
+
+#main-header {
+    background:#3B7302;
+    color:white;
+    border-radius:10px;
+    padding:5px;
+}
+
+/* Main Navigation */
+#main-nav ul {
+    padding-left:0;         /* remove indent */
+    list-style-type: none; /* remove bullets */
+}
+
+#main-nav li {
+    border-bottom:1px solid white;
+}
+
+#main-nav li:first-child {
+    border-top:1px solid white;
+}
+
+#main-nav a {
+    color:white;
+    padding:10px 0;
+    display:block;
+    text-decoration: none; /* remove underlines */
+}
+
+#main-nav a:hover {
+    background:#F2EDA0;
+    color:#3B7302;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+}
+
+
+
+/* Larger Devices Media Query (always goes last) */
+@media only screen and (min-width: 760px) {
+    body {
+        background: url(images/tree.jpg)
+        /* background-size:cover; -- not working, syntax error (?) */ 
+    }
+
+    #content {
+        width: 70%;
+    }
+
+    /* Columns */
+    .columns {
+        display:flex;
+    }
+
+    /* Main Nav */
+    #main-nav li {
+        flex:1;
+    }
+
+    #main-nav li, #main-nav li:first-child {
+        border:none;
+    }
+
+    #main-nav a {
+        text-align:center;
+        padding:5px;
+    }
+
+    #main-nav a:hover {
+        background:#3B7302;
+        color:white;
+        border-bottom:1px solid white;
+    }
+}
