@@ -19,6 +19,41 @@ body {
     padding:5px;
 }
 
+#main-content section, #main-content aside {
+    padding:5px;
+}
+
+.squirrel {
+    background:#595924;
+    padding:5px;
+    border-radius:5px;
+    margin:5px;
+}
+/* 
+.squirrel .columns div {
+    width:30%;
+} */
+
+/* Gallery */
+#gallery {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#gallery section {
+    text-align:center;
+    width:25%;
+}
+
+#gallery img {
+    padding:5px;
+}
+
+/* Images */ 
+img {
+    max-width:100%;     /* !!! ADD TO MAIN PAGE CSS !!! */
+}
+
 /* Main Navigation */
 #main-nav ul {
     padding-left:0;         /* remove indent */
@@ -50,7 +85,13 @@ h1 {
     text-align: center;
 }
 
+.hide {
+    display:none;
+}
 
+.hide-small {
+    display:none;
+}
 
 /* Larger Devices Media Query (always goes last) */
 @media only screen and (min-width: 760px) {
@@ -66,6 +107,26 @@ h1 {
     /* Columns */
     .columns {
         display:flex;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+    .five {
+        flex:5;
     }
 
     /* Main Nav */
@@ -86,5 +147,9 @@ h1 {
         background:#3B7302;
         color:white;
         border-bottom:1px solid white;
+    }
+
+    .hide-small {
+        display:block;  /* not visible on small screens, but visible on larger screens */
     }
 }
