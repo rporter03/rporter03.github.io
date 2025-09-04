@@ -1,6 +1,12 @@
+/* CSS Variables */
+:root {
+    --primary-color:#558C03;
+    --secondary-color:#2b5924;
+}
+
 /* Structure */
 body {
-    background:#558C03;
+    background:var(--primary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,10 +19,20 @@ body {
 }
 
 #main-header {
-    background:#3B7302;
+    background:var(--primary-color);
     color:white;
     border-radius:10px;
     padding:5px;
+    position:relative;
+}
+
+#main-header img {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:75px;
+    border-radius:50px; /* circle an even ratioed img */
 }
 
 #main-content section, #main-content aside {
@@ -24,7 +40,7 @@ body {
 }
 
 .squirrel {
-    background:#595924;
+    background:var(--secondary-color);
     padding:5px;
     border-radius:5px;
     margin:5px;
@@ -33,6 +49,22 @@ body {
 .squirrel .columns div {
     width:30%;
 } */
+
+/* Showcase */
+#showcase {
+    position:relative;
+}
+
+#showcase p {
+    background:rgba(0, 0, 0, 0.7);
+    color:white;
+    padding:10px;
+    width:fit-content;
+
+    position:absolute;
+    bottom:20%;
+    left:5%;
+}
 
 /* Gallery */
 #gallery {
@@ -55,9 +87,13 @@ img {
 }
 
 /* Main Navigation */
-#main-nav ul {
+nav ul {
     padding-left:0;         /* remove indent */
     list-style-type: none; /* remove bullets */
+}
+
+nav a {
+    text-decoration: none;
 }
 
 #main-nav li {
@@ -72,12 +108,26 @@ img {
     color:white;
     padding:10px 0;
     display:block;
-    text-decoration: none; /* remove underlines */
 }
 
 #main-nav a:hover {
     background:#F2EDA0;
-    color:#3B7302;
+}
+
+#login-nav {
+    position:absolute;
+    top:2.5%;
+    right:2.5%;
+}
+
+#login-nav a {
+    color:white;
+    padding:5px;
+    display:block;
+}
+
+#login-nav li:hover {
+    border-bottom:1px solid white;
 }
 
 /* Typography */
@@ -144,9 +194,17 @@ h1 {
     }
 
     #main-nav a:hover {
-        background:#3B7302;
+        background:var(--primary-color);
         color:white;
         border-bottom:1px solid white;
+    }
+
+    #login-nav a {
+        display:inline;
+    }
+
+    #login-nav li:not(:last-child)::after {
+    content:"|";
     }
 
     .hide-small {
