@@ -71,6 +71,8 @@ li {
     display:block;
     padding:5px;
     margin: auto;
+    max-width:300px;
+    max-height:150px;
 }
 
 #assignment-list li {
@@ -132,5 +134,10 @@ li {
     #main-nav a:hover {
         color:white;
         background:rgb(19, 19, 66);
+    }
+
+    /* Footer */
+    #main-footer a:hover {
+        color:white;
     }
 }
