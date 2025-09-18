@@ -45,3 +45,56 @@ document.getElementById("txt-emotion").onkeyup = (event) => {
     document.getElementById("p-emotion").innerHTML = `You are feeling ${userInput}.`;
     document.getElementById("img-emotion").classList.remove("hidden");
 };
+
+document.getElementById("btn-mood-ring").onclick = () => {
+    const color = document.getElementById("txt-color").value.trim().toLowerCase();
+    const p = document.getElementById("p-mood-result");
+    const error = document.getElementById("error-color");
+    error.innerHTML = ""; //reset error
+    let mood = "";
+    
+    if(color == "") {
+        document.getElementById("error-color").innerHTML = "*blank";
+        return;
+    }
+
+    /*if(color == "red") {
+        p.innerHTML = "you are ANGRY";
+        return;
+    }
+
+    else if(color == "blue") {
+        p.innerHTML = "you are SAD";
+        return;
+    }
+
+    else {
+        p.innerHTML = "that is NOT a color!!!"
+    }*/
+
+    if(color == "red") {
+        mood = "angry";
+    }
+
+    else if(color == "yellow") {
+        mood = "mellow";
+    }
+
+    if(mood == "") {
+        error.innerHTML = "*Invalid Color"
+        return;
+    }
+
+    p.innerHTML = `You chose ${color}, so you are feeling ${mood}`;
+};
+
+document.getElementById("btn-bounce").onclick = (event) => {
+    const ball = document.getElementById("ball");
+    if(ball.classList.contains("bounce")) {
+        event.currentTarget.innnerHTML = "Start";
+    }
+    else {
+        event.currentTarget.innerHTML = "Stop";
+    }
+    ball.classList.toggle("bounce"); 
+}
