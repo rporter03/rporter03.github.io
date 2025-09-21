@@ -1,0 +1,299 @@
+/* Structure */
+:root {
+    --main-background-color:#DCDDDD;
+    --primary-color:#FBFAF5;
+    --secondary-color:#EAE5E3;
+    --tertiary-color:#E7E7EB;
+    --extra-color:black;
+    --lavender:#9EA3F5;
+}
+
+body {
+    background-color:var(--main-background-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background:var(--primary-color);
+    width:75%;
+    margin:auto;
+    border-radius: 10px;
+    padding:10px;
+}
+
+header {
+    position:relative;
+}
+
+#featured-artists {
+    text-align:center;
+}
+
+#featured-artists h2, #about h2, #blog h2, #discover-artists h2, #forums h2, #contact h2 {
+    padding-top:50px;
+    text-align:center;
+}
+
+#featured-artists p {
+    margin:auto;
+    max-width:75%;
+    padding:10px
+}
+
+#featured-artists a {
+    padding:10px;
+    text-decoration:none;
+    color:var(--extra-color);
+}
+
+#featured-artists a:hover {
+    color:var(--lavender);
+    background-color:var(--secondary-color);
+    border-radius:5px;
+}
+
+.artist {
+    background:var(--secondary-color);
+    border-radius:10px;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#featured-forums h2 {
+    padding-top:50px;
+    padding-bottom:25px;
+    text-align:center;
+    margin:auto;
+}
+
+#forum-post p {
+    padding:5px;
+}
+
+.forum-post {
+    background:var(--secondary-color);
+    margin-bottom:20px;
+    padding:15px;
+}
+
+.forum-post a {
+    display:inline-block;
+    text-decoration:none;
+    color:var(--extra-color);
+    border-radius:5px;
+    padding:5px;
+}
+
+.forum-post a:hover {
+    color:var(--lavender);
+    background-color:var(--primary-color);
+}
+
+#about p {
+    text-align:left;
+    background:var(--tertiary-color);
+    padding:5%;
+    border-radius:10px;
+}
+
+#about img, #discover-artists img {
+    display:block;
+    margin:auto;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+.blog-post {
+    background:var(--tertiary-color);
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.blog-post a {
+    text-decoration:none;
+    color:var(--extra-color);
+}
+
+.blog-post a:hover {
+    color:var(--extra-color);
+    background-color:var(--tertiary-color);
+    border-radius:5px;
+    border-bottom:1px solid;
+}
+
+#discover-artists {
+    text-align:center;
+}
+
+#discover-artists p {
+    background:var(--tertiary-color);
+    padding:10px;
+    border-radius:10px;
+    max-width:75%;
+    margin:auto;
+}
+
+#discover-artists button {
+   margin-top:20px;
+}
+
+#forum-container {
+    background:var(--tertiary-color);
+    border-radius:10px;
+    margin-top:20px;
+    text-align:center;
+}
+
+#forum-header {
+    background:var(--secondary-color);
+    padding:20px;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    font-weight:bold;
+    border-bottom:2px solid var(--extra-color);
+    text-align:center;
+}
+
+.forum-row {
+    padding:10px;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    align-items:center;
+    border-bottom:1px solid var(--extra-color);
+}
+
+.forum-row:last-child {
+    border-bottom:none;
+}
+
+.post-title {
+    text-decoration:none;
+    color:var(--extra-color);
+    font-weight:bold;
+}
+
+.post-title:hover {
+    border-bottom:1px solid var(--extra-color);
+}
+
+.count {
+    text-align:center;
+}
+
+.last-post {
+    text-align:center;
+}
+
+#contact-block, #suggest-block {
+    text-align:center;
+    background:var(--tertiary-color);
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:250px;
+}
+
+#contact img {
+    display:block;
+    margin:auto;
+    max-width:100%;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left:0;
+}
+
+#main-nav li {
+    list-style-type:none;
+    text-align:center;
+}
+
+#main-nav a {
+    text-decoration:none;
+    color:var(--extra-color);
+}
+
+#main-nav a:hover, #login-nav a:hover {
+    color:var(--lavender);
+    background-color:var(--secondary-color);
+    padding:5px;
+    border-radius:5px;
+    border-bottom:1px solid;
+}
+
+#login-nav {
+    position:absolute;
+    top:2.5%;
+    right:2.5;
+}
+
+#login-nav a {
+    color:var(--extra-color);
+    padding:5px;
+    text-decoration:none;
+}
+
+#login-nav ul {
+    margin:0;
+    padding-left:0;
+}
+
+#login-nav li {
+    list-style-type:none;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+    padding:10px;
+}
+
+/* Medium Screens */
+@media only screen and (min-width:800px) {
+    .columns {
+        display:flex;
+        gap:20px;
+    }
+
+    #login-nav ul {
+        display:flex;
+        gap:10px;
+        align-items:center;
+    }
+
+    #login-nav li {
+        display:inline;
+    }
+
+    #login-nav a {
+        display:inline-block;
+        margin-right:5px;
+    }
+
+    #login-nav li:not(:last-child)::after {
+        content:"|";
+    }
+}
+
+/* Large Screens */
+@media only screen and (min-width:1200px) {
+    #main-nav li {
+        flex:1;
+        border-bottom:0;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+}
