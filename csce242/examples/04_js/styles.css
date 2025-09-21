@@ -142,7 +142,7 @@ main {
     height:200px;
     margin-right:10%;
     border:2px solid var(--primary-color);
-    background:linear-gradient(0deg, red 0% var(--donation-percent), white var(--donation-percent) 100%);
+    background:linear-gradient(45deg, red var(--donation-percent) 0% 20%, orange var(--donation-percent) 30% 40%, green var(--donation-percent) 50% 70%, blue var(--donation-percent) 75% 100%);
 }
 
 .error {

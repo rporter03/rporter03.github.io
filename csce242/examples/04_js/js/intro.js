@@ -97,4 +97,68 @@ document.getElementById("btn-bounce").onclick = (event) => {
         event.currentTarget.innerHTML = "Stop";
     }
     ball.classList.toggle("bounce"); 
+};
+
+/* Counter */
+let counter = 0;
+let counterInterval;
+const countP = document.getElementById("p-count");
+const btnStart = document.getElementById("btn-count-start");
+const btnPause = document.getElementById("btn-count-pause");
+const btnReset = document.getElementById("btn-count-reset");
+
+// disable buttons by default
+btnPause.disabled = true;
+btnReset.disabled = true;
+
+btnStart.onclick = () => {
+    counterInterval = setInterval(() => {
+        counter++;
+        countP.innerHTML = counter;
+    }, 1000);
+    btnStart.disabled = true;
+    btnPause.disabled = false;
+    btnReset.disabled = false;
+};
+
+btnPause.onclick = () => {
+    clearInterval(counterInterval);
+    btnStart.disabled = false;
+    btnPause.disabled = true;
+    btnReset.disabled = false;
+};
+
+btnReset.onclick = () => {
+    counter = 0;
+    btnStart.disabled = true;
+    btnPause.disabled = false;
+    btnReset.disabled = false;
+};
+
+/* Donations */
+const goal = 10000;
+let totalDonations = 0;
+document.getElementById("goal-span").innerHTML = goal;
+
+document.getElementById("btn-donations").onclick = () => {
+    const donation = document.getElementById("txt-donations").value;
+    const errorSpan = document.getElementById("donation-error");
+    const donationMessage = document.getElementById("donation-message");
+    errorSpan.innerHTML = " ";
+    if(isNaN(donation) || donation <= 0) {
+        errorSpan.innerHTML = "* Invalid Amount";
+        return;
+    }
+
+    totalDonations+= parseInt(donation);
+    const donationPercent = donation/goal * 100;
+    if(donationPercent >= 100) {
+        donationMessage.innerHTML = "Goal Reached!"
+    } else if(donationPercent >= 50) {
+        donationMessage.innerHTML = "Over Half Way There!"
+    } else {
+        donationMessage.innerHTML = "Let's Get Started"
+    }
+
+    document.querySelector(":root").style.setProperty("--donation-percent", donationPercent + "%");
 }
