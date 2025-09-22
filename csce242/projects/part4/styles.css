@@ -1,7 +1,7 @@
 /* Structure */
 :root {
-    --main-background-color:#DCDDDD;
-    --primary-color:#FBFAF5;
+    --main-background-color:#28384d;
+    --primary-color:#8bb3ec;
     --secondary-color:#EAE5E3;
     --tertiary-color:#E7E7EB;
     --extra-color:black;
@@ -61,6 +61,11 @@ header {
     align-items:center;
 }
 
+.artist img {
+    max-width:100px;
+    max-height:100px;
+}
+
 #featured-forums h2 {
     padding-top:50px;
     padding-bottom:25px;
@@ -76,6 +81,7 @@ header {
     background:var(--secondary-color);
     margin-bottom:20px;
     padding:15px;
+    border-radius:10px;
 }
 
 .forum-post a {
@@ -103,6 +109,8 @@ header {
     margin:auto;
     margin-top:20px;
     border-radius:10px;
+    max-width:300px;
+    max-height:300px;
 }
 
 .blog-post {
@@ -217,11 +225,11 @@ header {
 }
 
 #main-nav a:hover, #login-nav a:hover {
-    color:var(--lavender);
-    background-color:var(--secondary-color);
+    color:var(--secondary-color);
+    
     padding:5px;
     border-radius:5px;
-    border-bottom:1px solid;
+    border-bottom:2px solid var(--secondary-color);
 }
 
 #login-nav {
