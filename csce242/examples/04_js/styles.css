@@ -305,9 +305,6 @@ footer p {
     }
 }
 
-
-
-
 /* Larger screens */
 @media only screen and (min-width: 1200px) { 
     #toggle-nav {
