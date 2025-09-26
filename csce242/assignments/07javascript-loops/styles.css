@@ -1,0 +1,96 @@
+/* Structure */
+:root {    
+    --day:#52eeee;
+    --night:#1b1b1b;
+    --tree-leaves:#09550c;
+    --tree-trunk:#5a3622fa;
+    --cloud:#e2e2e2;
+    --sun:#ffd504;
+    --moon:#fbff85;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--day);
+}
+
+body.night {
+    background:var(--night);
+    color:white;
+}
+
+.cloud {
+    display:inline-block;
+    background-color:var(--cloud);
+    width:50px;
+    height:30px;
+    border-radius:20px;
+    margin:10px;
+    position:absolute;
+}
+
+.tree {
+    position:absolute;
+    bottom:0;
+}
+
+.tree-trunk {
+    width:10px;
+    height:40px;
+    background:var(--tree-trunk);
+    margin:0 auto;
+}
+
+.tree-leaves {
+    width:30px;
+    height:30px;
+    background:var(--tree-leaves);
+    border-radius:50%;
+    margin:0 auto;
+}
+
+.sun {
+    width:50px;
+    height:50px;
+    background:var(--sun);
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    right:50px;
+}
+
+.moon {
+    width:50px;
+    height:50px;
+    background:var(--moon);
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    right:50px;
+}
+
+/* Larger Devices Media Query */
+@media only screen and (min-width: 760px) {
+    #content {
+        width:100%;
+        text-align:center;
+    }
+
+    /* Columns */
+    .columns {
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+}
