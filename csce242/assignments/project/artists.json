@@ -1,0 +1,13 @@
+[
+    {
+        "artist": "pixies",
+        "genre": "alternative rock",
+        "rating": "4",
+        "img": "pixies.jpg"
+    },{
+        "artist": "forth wanderers",
+        "genre": "indie rock",
+        "rating": "4.9",
+        "img": "forth-wanderers.jpg"
+    }
+]
