@@ -17,7 +17,7 @@ const showArtists = async() => {
 
         // create section for each artist
         const artistSection = document.createElement("section");
-        shoeSection.classList.add("artist"); // may need to make new class; artist-browse ?
+        artistSection.classList.add("artist"); // may need to make new class; artist-browse ?
 
         // heading
         const h3 = document.createElement("h3");
@@ -32,15 +32,16 @@ const showArtists = async() => {
         // description
         const p = document.createElement("p");
         artistSection.append(p);
-        p.innerHTML = artist.description;
+        p.innerHTML = artist.Description;
 
         // image
         const img = document.createElement("img");
         artistSection.append(img);
-        img.src = `https://rporter03.github.io/csce242/projects/part6/images/${artist.img}`;
+        img.src = artist.img;
 
         // append
         artistListDiv.append(artistSection);
+        console.log(artist.Description);
     })
 };
 

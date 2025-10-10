@@ -262,6 +262,13 @@ header {
     border-radius:10px;
 }
 
+#artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
 /* Navigation */
 #toggle-nav div {
     width:25px;

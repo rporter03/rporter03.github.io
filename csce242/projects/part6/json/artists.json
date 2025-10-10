@@ -34,7 +34,7 @@
         "artist": "Tabar",
         "genre": "Math Pop",
         "Description": "Tabar was a math pop band that was very short lived, only releasing one EP with three songs in 2010a. However, their sound is incredible and very enjoyable to listen to. Their recent whereabouts are unknown and recent forum posts suggest they have no presence online.",
-        "img": "images/tabar.jpg"
+        "img": "images/tabar.png"
     },{
         "id": 7,
         "artist": "Adult Mom",
@@ -46,6 +46,6 @@
         "artist": "Brittle Stars",
         "genre": "Indie Pop",
         "Description": "Coming from Florida in the late 90s, Brittle Stars were an indie pop band with short, sweat, and dreamy sounding songs. They have released two albums and as of more recently, have released two singles as well. The band was composed of four members who each brought their own instrument to life in their sounds.",
-        "img": "images/brittle-stars.jpg"
+        "img": "images/brittle-stars.webp"
     }
 ]
